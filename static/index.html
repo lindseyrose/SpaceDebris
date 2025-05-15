@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Debris Tracker</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <!-- Three.js and related imports are handled by relative paths in main.js -->
+</head>
+<body>
+    <div id="ui-container" style="pointer-events: none;">
+        <div id="controls" style="pointer-events: auto;">
+            <h1>Space Debris Tracker</h1>
+            <div id="connection-status" class="status-connecting">Connecting to data source...</div>
+            <div class="layer-toggles">
+                <h3>Data Layers</h3>
+                <label>
+                    <input type="checkbox" id="toggle-debris" checked>
+                    Space Debris
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-satellites" checked>
+                    Active Satellites
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-predictions" checked>
+                    Trajectory Predictions
+                </label>
+            </div>
+            <div class="risk-filter">
+                <h3>Risk Level</h3>
+                <input type="range" id="risk-threshold" min="0" max="100" value="50">
+                <span id="risk-value">50%</span>
+            </div>
+        </div>
+        <div id="info-panel" style="pointer-events: auto;">
+            <h3>Selected Object</h3>
+            <div id="object-info">
+                <p>Click on an object to see details</p>
+            </div>
+        </div>
+    </div>
+    <canvas id="debris-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

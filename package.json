@@ -1,0 +1,18 @@
+{
+  "name": "space-debris-tracker",
+  "version": "1.0.0",
+  "description": "The Space Debris Tracker is a web application that visualizes space debris data from Space-Track.org, providing real-time tracking and analysis of orbital debris objects. The project aims to provide insights into the growing challenge of space debris in Earth's orbit.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.176.0"
+  }
+}
